@@ -3,6 +3,7 @@
 #use strict;
 use Bio::EnsEMBL::Registry;
 use Bio::EnsEMBL::Compara::DBSQL::DBAdaptor;
+use Bio::AlignIO
 my $reg = "Bio::EnsEMBL::Registry";
 
 print "Connect to DB\n";
@@ -52,10 +53,10 @@ foreach my $homology (@{$homologies}) {
 					#print "\n";
 				}
 		}
-	#}
-	#print " dn ", $homology->dn,"\n";
-  	#print " ds ", $homology->ds,"\n";
-	#print " dnds_ratio ", $homology->dnds_ratio,"\n";
+	}
+	print " dn ", $homology->dn,"\n";
+  	print " ds ", $homology->ds,"\n";
+	print " dnds_ratio ", $homology->dnds_ratio,"\n";
 }
 
 #my $homology = $homologies->[0];
