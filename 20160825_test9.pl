@@ -23,9 +23,10 @@ my $hg_adaptor = $reg->get_adaptor("human","core","Gene"); #what adaptors do I n
 my $familyA = $reg->get_adaptor("Multi", "compara", "Family");
 my $seqmemberA = $reg->get_adaptor("Multi", "compara", "SeqMember");
 
+my $gene_input = <STDIN>;
 
 my $gene_member_adaptor = Bio::EnsEMBL::Registry->get_adaptor('Multi', 'compara', 'GeneMember');
-my $gene_member = $gene_member_adaptor->fetch_by_stable_id('ENSG00000196218');
+my $gene_member = $gene_member_adaptor->fetch_by_stable_id($gene_input);
 
 my $homology_adaptor = Bio::EnsEMBL::Registry->get_adaptor('Multi', 'compara', 'Homology');
 my $homologies = $homology_adaptor->fetch_all_by_Member($gene_member);
