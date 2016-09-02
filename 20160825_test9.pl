@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+#comment_test
+
 #use strict;
 use Bio::EnsEMBL::Registry;
 use Bio::EnsEMBL::Compara::DBSQL::DBAdaptor;
