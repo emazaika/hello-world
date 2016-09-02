@@ -41,7 +41,7 @@ foreach my $homology (@{$homologies}) {
 
 		foreach my $member (@{$homology2->get_all_Members}) {
 				if ($member->taxon_id == 9606) {
-					print (join " ", map { $member->$_ } qw(stable_id)), " ";
+					print (join " ", map { $member->$_ } qw(stable_id)). " ";
 					print $member->taxon_id;
 					print "\n";
 					#print (join " ", map { $member->$_ } qw(perc_id perc_pos perc_cov));
