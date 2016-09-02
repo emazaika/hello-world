@@ -24,7 +24,8 @@ my $familyA = $reg->get_adaptor("Multi", "compara", "Family");
 my $seqmemberA = $reg->get_adaptor("Multi", "compara", "SeqMember");
 
 print "Enter Gene ID";
-my $gene_input = 'ENSG00000196218';
+my $gene_input = <STDIN>;
+chomp($gene_input);
 
 my $gene_member_adaptor = Bio::EnsEMBL::Registry->get_adaptor('Multi', 'compara', 'GeneMember');
 my $gene_member = $gene_member_adaptor->fetch_by_stable_id($gene_input);
