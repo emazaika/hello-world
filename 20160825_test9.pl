@@ -5,8 +5,6 @@ use Bio::EnsEMBL::Registry;
 use Bio::EnsEMBL::Compara::DBSQL::DBAdaptor;
 my $reg = "Bio::EnsEMBL::Registry";
 
-print "committing test";
-
 print "Connect to DB\n";
 $reg->load_registry_from_db(
     -host , "ensembldb.ensembl.org",
@@ -43,7 +41,8 @@ foreach my $homology (@{$homologies}) {
 
 		foreach my $member (@{$homology2->get_all_Members}) {
 				if ($member->taxon_id == 9606) {
-					print (join " ", map { $member->$_ } qw(stable_id)). " ";
+					print (join " ", map { $member->$_ } qw(stable_id));
+					print " ";
 					print $member->taxon_id;
 					print "\n";
 					#print (join " ", map { $member->$_ } qw(perc_id perc_pos perc_cov));
