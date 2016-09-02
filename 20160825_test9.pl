@@ -41,22 +41,20 @@ foreach my $homology (@{$homologies}) {
 		print $n," ", $homology->description," ", $homology->taxonomy_level,"\n";	
 		$n = $n + 1;
 		my $homology2 = $homologies->[$n];
-		print 'test ' %{$homology2};
 
-		foreach my $member (@{$homology2->get_all_Members}) {
-				if ($member->taxon_id == 9606) {
-					print (join " ", map { $member->$_ } qw(stable_id));
-					print " ";
-					print $member->taxon_id;
-					print "\n";
-					#print (join " ", map { $member->$_ } qw(perc_id perc_pos perc_cov));
-					#print "\n";
-				}
+		if $n < 79 {
+
+			foreach my $member (@{$homology2->get_all_Members}) {
+					if ($member->taxon_id == 9606) {
+						print (join " ", map { $member->$_ } qw(stable_id));
+						print " ";
+						print $member->taxon_id;
+						print "\n";
+						#print (join " ", map { $member->$_ } qw(perc_id perc_pos perc_cov));
+						#print "\n";
+					}
+			}
 		}
-	
-	print " dn ", $homology->dn,"\n";
-  	print " ds ", $homology->ds,"\n";
-	print " dnds_ratio ", $homology->dnds_ratio,"\n";
 }
 
 print "Which homology (enter number) \n";
