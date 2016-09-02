@@ -1,11 +1,11 @@
 #!/usr/bin/perl
 
-#comment_test
-
 #use strict;
 use Bio::EnsEMBL::Registry;
 use Bio::EnsEMBL::Compara::DBSQL::DBAdaptor;
 my $reg = "Bio::EnsEMBL::Registry";
+
+print "committing test";
 
 print "Connect to DB\n";
 $reg->load_registry_from_db(
