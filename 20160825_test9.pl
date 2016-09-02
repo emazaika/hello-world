@@ -23,6 +23,7 @@ my $hg_adaptor = $reg->get_adaptor("human","core","Gene"); #what adaptors do I n
 my $familyA = $reg->get_adaptor("Multi", "compara", "Family");
 my $seqmemberA = $reg->get_adaptor("Multi", "compara", "SeqMember");
 
+print "Enter Gene ID";
 my $gene_input = <STDIN>;
 
 my $gene_member_adaptor = Bio::EnsEMBL::Registry->get_adaptor('Multi', 'compara', 'GeneMember');
