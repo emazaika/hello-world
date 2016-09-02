@@ -23,7 +23,7 @@ my $hg_adaptor = $reg->get_adaptor("human","core","Gene"); #what adaptors do I n
 my $familyA = $reg->get_adaptor("Multi", "compara", "Family");
 my $seqmemberA = $reg->get_adaptor("Multi", "compara", "SeqMember");
 
-print "Enter Gene ID";
+print "Enter Gene ID \n";
 my $gene_input = <STDIN>;
 chomp($gene_input);
 
