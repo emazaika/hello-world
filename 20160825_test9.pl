@@ -42,7 +42,7 @@ foreach my $homology (@{$homologies}) {
 		$n = $n + 1;
 		my $homology2 = $homologies->[$n];
 
-		if ($n < 79) && ($n > 71) {
+		if (($n < 79) && ($n > 71)) {
 
 			foreach my $member (@{$homology2->get_all_Members}) {
 					if ($member->taxon_id == 9606) {
